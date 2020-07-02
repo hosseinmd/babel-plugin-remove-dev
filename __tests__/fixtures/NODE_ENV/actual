@@ -1,0 +1,18 @@
+if (process.env.NODE_ENV !== "production") {
+  runOnDev();
+}
+
+if (process.env.NODE_ENV === "production") {
+  runOnNotDev();
+}
+
+if (process.env.NODE_ENV === "development") {
+  runOnDev();
+}
+
+if ("development" === process.env.NODE_ENV) {
+  runOnDev();
+}
+
+const a = "a";
+const b = "n";

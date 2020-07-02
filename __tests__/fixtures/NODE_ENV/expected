@@ -1,0 +1,6 @@
+if (process.env.NODE_ENV === "production") {
+  runOnNotDev();
+}
+
+const a = "a";
+const b = "n";

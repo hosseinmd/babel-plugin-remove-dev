@@ -1,0 +1,15 @@
+if (__DEV__) {
+  runOnDev();
+}
+
+if (!__DEV__) {
+  runOnNotDev();
+}
+
+const Dev = __DEV__;
+if (Dev) {
+  runOnDev();
+}
+
+const a = "a";
+const b = "n";
