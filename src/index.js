@@ -1,5 +1,10 @@
-export default function ({ template }) {
+import { declare } from "@babel/helper-plugin-utils";
+
+export default declare((api) => {
+  api.assertVersion(7);
+
   return {
+    name: "remove-dev",
     visitor: {
       Program(path) {
         // On program start, do an explicit traversal up front for this plugin.
@@ -39,7 +44,7 @@ export default function ({ template }) {
       },
     },
   };
-}
+});
 
 function isProcessEnvNODE_ENV(leftOrRight) {
   if (leftOrRight && leftOrRight.type === "MemberExpression") {
